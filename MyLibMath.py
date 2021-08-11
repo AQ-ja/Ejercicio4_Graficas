@@ -16,3 +16,18 @@ def punto (vector1, vector2):
         for x in range(len(vector1)):
             total += vector1[x] * vector2[x]
         return total
+
+
+def cross(vector1, vector2):
+    if len(vector1) == 3 & len(vector2) == 3:
+        i = vector1[1]*vector2[2] - vector2[1]*vector1[2]
+        j = vector1[0]*vector2[2] - vector2[0]*vector1[2]
+        k = vector1[0]*vector2[1] - vector2[0]*vector1[1]
+        return [i, -j, k]
+    if len(vector1) == 2 & len(vector2) == 2:
+
+        k = vector1[0]*vector2[1] - vector2[0]*vector1[1]
+        return [k]
+    else:
+
+        return ArithmeticError("No puede hacerse")

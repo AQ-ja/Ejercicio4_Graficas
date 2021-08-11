@@ -10,7 +10,7 @@ height = 540
 
 rend = Renderer(width, height)
 
-modelTexture = Texture("Models/skin3.bmp")
+modelTexture = Texture("Models/skin1.bmp")
 
 
 rend.glLoadModel("Models/model.obj", modelTexture, V3(width/2, height/2, 0), V3(200, 200,200))

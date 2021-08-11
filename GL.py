@@ -334,7 +334,7 @@ class Renderer(object):
                 d = self.glTransform(vt3, translate, scale)
 
 
-            normal = np.cross(Myl.sub(vert1,vert0), Myl.sub(vert2,vert0))
+            normal = Myl.cross(Myl.sub(vert1,vert0), Myl.sub(vert2,vert0))
             normal = normal / np.linalg.norm(normal) # la normalizamos
             intensity = Myl.punto(normal, -light)
 
